@@ -303,6 +303,7 @@ a {
 
 button {
   cursor: pointer;
+  border: 0;
 }
 
 :root {
@@ -346,8 +347,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  background-color: aqua;
-  text-align: center;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -367,6 +366,17 @@ body {
 
 /* Флекс контейнер с центрированием */
 /* Формат секций */
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 /* Фон чередующихся секций */
 .section--grey {
   background-color: var(--secondary-background-color);
@@ -490,33 +500,63 @@ body {
 /* Заголовки секций */
 .section-header {
   color: var(--title-primary-text-color);
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.1785714286;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section-header {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 /* Секция-герой */
 .hero {
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  max-width: 480px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../../images/studio-mobile/hero.jpg);
   background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 
 .hero__header {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--title-secondary-text-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6153846154;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+@media screen and (min-width: 1200px) {
+  .hero__header {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
 
 .hero__button {
+  padding: 10px 24px;
+  margin-top: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border: 1px solid transparent;
   color: var(--title-secondary-text-color);
   background-color: var(--accent-color);
   transition: background-color 250ms var(--time-function);
@@ -526,19 +566,44 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
 }
+@media screen and (min-width: 1200px) {
+  .hero__button {
+    padding: 10px 32px;
+  }
+}
 .hero__button:hover, .hero__button:focus {
   background-color: #188ce8;
 }
 
 /* Секция Преимущества */
+.benefit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .benefit-list__item {
-  width: calc((100% - 90px) / 4);
+  min-width: 70px;
+}
+@media screen and (min-width: 1200px) {
+  .benefit-list__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .benefit-list__iconwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
   background-color: var(--secondary-background-color);
   border-radius: 4px;
-  border-color: transparent;
+}
+@media screen and (min-width: 1200px) {
+  .benefit-list__iconwrap {
+    width: 270px;
+  }
 }
 
 .benefit-list__icon {
@@ -549,13 +614,18 @@ body {
 .benefit-list__title {
   color: var(--title-primary-text-color);
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.1428571429;
   text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .benefit-list__title {
+    text-align: center;
+  }
 }
 
 .benefit-list__text {
   margin-top: 10px;
-  line-height: 1.71;
+  line-height: 1.7142857143;
 }
 
 /* секция Чим займаємося */
@@ -592,11 +662,37 @@ body {
 }
 
 /* Секция Наша команда */
+.team {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    margin-top: 50px;
+  }
+}
+
 .teammate {
-  width: calc((100% - 90px) / 4);
   background-color: var(--page-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 1200px) {
+  .teammate {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+.teammate__info-wrap {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .teammate__info-wrap {
+    padding-bottom: 30px;
+  }
 }
 
 .teammate__name {
@@ -608,6 +704,8 @@ body {
 }
 
 .teammate__position {
+  margin-top: 10px;
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -618,16 +716,28 @@ body {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .client-list {
+    margin-top: 50px;
+  }
 }
 
 .client-list__item {
   width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 1200px) {
+  .client-list__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .client-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 92px;
   border: 1px solid var(--icon-main-color);
   border-radius: 4px;
   outline: none;
@@ -808,7 +918,7 @@ body {
 }
 
 .signup__button {
-  max-width: 200px;
+  width: 200px;
   height: 50px;
   display: flex;
   align-items: center;
