@@ -1,0 +1,62 @@
+/* Соцсети */
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--icon-main-color);
+  transition: color 250ms var(--time-function),
+    background-color 250ms var(--time-function);
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--page-background);
+  }
+}
+
+// .social-link:focus,
+// .social-link:hover {
+//     background-color: var(--accent-color);
+//     color: var(--page-background);
+// }
+
+.social-link__icon {
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
+}
+
+/* Социальные сети в футере */
+
+.join-social {
+  margin-left: 70px;
+}
+
+.join-social__title {
+  color: var(--title-secondary-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.join-social__social-list {
+  width: 206px;
+  margin-top: 20px;
+}
+
+.social-link--dark-theme {
+  color: var(--page-background);
+  background-color: rgba(255, 255, 255, 0.1);
+}

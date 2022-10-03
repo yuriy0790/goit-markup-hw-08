@@ -1,0 +1,4 @@
+// Ширина карточки в наборе
+@mixin card-width($card-gap, $cards-amount) {
+  width: calc((100% - $card-gap * ($cards-amount - 1)) / $cards-amount);
+}

@@ -1,0 +1,43 @@
+/* Заготовка на сетки карточек */
+.card-template {
+  --card-gap: 30px;
+  --card-count: 4;
+  width: calc(
+    (100% - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count)
+  );
+}
+
+/* делает невидимым */
+.invisible {
+  display: block;
+  height: 0;
+  width: 0;
+  color: transparent;
+}
+
+/* Ширина контентной области */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Флекс контейнер с центрированием */
+.container--flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Формат секций */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Фон чередующихся секций */
+.section--grey {
+  background-color: var(--secondary-background-color);
+}

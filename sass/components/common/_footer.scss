@@ -1,0 +1,142 @@
+/* Футер */
+.footer {
+  background-color: var(--primary-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-width: 1200px;
+}
+
+.footer__overal-wrap {
+  display: flex;
+  align-items: baseline;
+}
+
+/* Адрес в футере*/
+
+.footer__address {
+  margin-top: 20px;
+  width: 231px;
+}
+
+.footer__contact-item {
+  display: block;
+
+  &:nth-child(n + 2) {
+    margin-top: 9px;
+  }
+}
+
+// .footer__contact-item:nth-child(n + 2) {
+//     margin-top: 9px;
+// }
+
+.footer__contact {
+  display: block;
+
+  color: rgb(255, 255, 255, 0.6);
+  transition: color 250ms var(--time-function);
+
+  font-style: normal;
+  line-height: 1.5;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+// .footer__contact:focus,
+// .footer__contact:hover {
+//     color: var(--accent-color);
+// }
+
+.footer__contact--white {
+  color: var(--title-secondary-text-color);
+}
+
+/* Форма подписки в футере */
+.signup {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  width: 570px;
+}
+
+.signup__label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: var(--title-secondary-text-color);
+}
+
+.signup__input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  margin-right: 12px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: var(--primary-background-color);
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+// .signup__input::placeholder {
+//     font-weight: 400;
+//     font-size: 16px;
+//     line-height: 1.25;
+//     letter-spacing: 0.03em;
+//     color: rgba(255, 255, 255, 0.6);
+// }
+
+.signup__button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: var(--title-secondary-text-color);
+  transition: background-color 250ms var(--time-function);
+
+  &:hover {
+    background-color: #188ce8;
+  }
+}
+
+// .signup__button:hover {
+//     background-color: #188ce8;
+// }
+
+.signup__icon {
+  height: 24px;
+  width: 24px;
+  fill: currentColor;
+  margin-left: 10px;
+}

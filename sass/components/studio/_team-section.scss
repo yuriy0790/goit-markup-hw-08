@@ -1,0 +1,39 @@
+/* Секция Наша команда */
+.team {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.teammate {
+  @include card-width(30px, 4);
+
+  background-color: var(--page-background);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.teammate__info-wrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.teammate__name {
+  color: var(--title-primary-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.teammate__position {
+  /* font-weight: 400 значение для параграфа умолчанию */
+  margin-top: 10px;
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
