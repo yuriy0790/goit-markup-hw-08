@@ -1,37 +1,33 @@
 /* Футер */
 .footer {
   background-color: var(--primary-background-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
-  min-width: 1200px;
+  // padding-top: 60px;
+  // padding-bottom: 60px;
+  // min-width: 1200px;
 }
 
 .footer__overal-wrap {
-  display: flex;
-  align-items: baseline;
+  // display: flex;
+  // align-items: baseline;
 }
 
 /* Адрес в футере*/
 
 .footer__address {
-  margin-top: 20px;
-  width: 231px;
+  // margin-top: 20px;
+  // width: 231px;
 }
 
 .footer__contact-item {
-  display: block;
+  // display: block;
 
-  &:nth-child(n + 2) {
-    margin-top: 9px;
-  }
+  // &:nth-child(n + 2) {
+  //   margin-top: 9px;
+  // }
 }
 
-// .footer__contact-item:nth-child(n + 2) {
-//     margin-top: 9px;
-// }
-
 .footer__contact {
-  display: block;
+  // display: block;
 
   color: rgb(255, 255, 255, 0.6);
   transition: color 250ms var(--time-function);
@@ -45,21 +41,16 @@
   }
 }
 
-// .footer__contact:focus,
-// .footer__contact:hover {
-//     color: var(--accent-color);
-// }
-
 .footer__contact--white {
   color: var(--title-secondary-text-color);
 }
 
 /* Форма подписки в футере */
 .signup {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  width: 570px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-left: auto;
+  // width: 570px;
 }
 
 .signup__label {
@@ -74,7 +65,7 @@
 }
 
 .signup__input {
-  width: 358px;
+  max-width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -97,16 +88,8 @@
   }
 }
 
-// .signup__input::placeholder {
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 1.25;
-//     letter-spacing: 0.03em;
-//     color: rgba(255, 255, 255, 0.6);
-// }
-
 .signup__button {
-  width: 200px;
+  max-width: 200px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -129,10 +112,6 @@
     background-color: #188ce8;
   }
 }
-
-// .signup__button:hover {
-//     background-color: #188ce8;
-// }
 
 .signup__icon {
   height: 24px;

@@ -1,9 +1,9 @@
 /* Секция Наша команда */
 .team {
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  // margin-top: 50px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // gap: 30px;
 }
 
 .teammate {
@@ -16,8 +16,8 @@
 }
 
 .teammate__info-wrap {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  // padding-top: 30px;
+  // padding-bottom: 30px;
 }
 
 .teammate__name {
@@ -29,9 +29,8 @@
 }
 
 .teammate__position {
-  /* font-weight: 400 значение для параграфа умолчанию */
-  margin-top: 10px;
-  margin-bottom: 16px;
+  // margin-top: 10px;
+  // margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.19;

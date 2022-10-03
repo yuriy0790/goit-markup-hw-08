@@ -3,19 +3,19 @@
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  margin-top: 50px;
+  // margin-top: 50px;
 }
 
 .client-list__item {
-  @include card-width(30px, 6);
+  @include card-width(30px, 2);
 }
 
 .client-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
+  // height: 92px;
 
-  height: 92px;
   border: 1px solid var(--icon-main-color);
   border-radius: 4px;
   outline: none;
@@ -29,12 +29,6 @@
     border-color: var(--accent-color);
   }
 }
-
-// .client-list__link:focus,
-// .client-list__link:hover {
-//     color: var(--accent-color);
-//     border-color: var(--accent-color);
-// }
 
 .client-list__icon {
   height: 60px;

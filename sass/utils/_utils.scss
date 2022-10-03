@@ -1,11 +1,11 @@
-/* Заготовка на сетки карточек */
-.card-template {
-  --card-gap: 30px;
-  --card-count: 4;
-  width: calc(
-    (100% - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count)
-  );
-}
+// /* Заготовка на сетки карточек */
+// .card-template {
+//   --card-gap: 30px;
+//   --card-count: 4;
+//   width: calc(
+//     (100% - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count)
+//   );
+// }
 
 /* делает невидимым */
 .invisible {
@@ -15,26 +15,44 @@
   color: transparent;
 }
 
+// Убрать из страницы
+.display-none {
+  display: none;
+}
+
 /* Ширина контентной области */
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  background-color: aqua;
+  text-align: center;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }
 
 /* Флекс контейнер с центрированием */
 .container--flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
 
 /* Формат секций */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  // padding-top: 94px;
+  // padding-bottom: 94px;
 }
 
 /* Фон чередующихся секций */
