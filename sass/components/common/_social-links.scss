@@ -34,7 +34,11 @@
 /* Социальные сети в футере */
 
 .join-social {
-  // margin-left: 70px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
 }
 
 .join-social__title {
@@ -46,8 +50,8 @@
 }
 
 .join-social__social-list {
-  // width: 206px;
-  // margin-top: 20px;
+  min-width: 206px;
+  margin-top: 20px;
 }
 
 .social-link--dark-theme {

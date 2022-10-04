@@ -386,14 +386,17 @@ body {
 .page-header {
   border-bottom: 1px solid #ececec;
 }
+@media screen and (max-width: 768px) {
+  .page-header {
+    height: 60px;
+  }
+}
 
 /* Навигация по сайту */
 .nav__link {
-  position: relative;
   color: var(--title-primary-text-color);
   transition: color 250ms var(--time-function);
   font-weight: 500;
-  /* font-size: 14px; наследуется из боди */
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
@@ -421,7 +424,6 @@ body {
   fill: var(--primary-text-color);
   transition: color 250ms var(--time-function), fill 250ms var(--time-function);
   font-weight: 500;
-  /* font-size: 14px; наследуется из боди */
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
@@ -439,8 +441,14 @@ body {
   color: var(--logo-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.1666666667;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 }
 
 /* Половину логотипа делает #2196F3 */
@@ -484,12 +492,27 @@ body {
 }
 
 /* Социальные сети в футере */
+.join-social {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .join-social {
+    margin-left: 70px;
+  }
+}
+
 .join-social__title {
   color: var(--title-secondary-text-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+.join-social__social-list {
+  min-width: 206px;
+  margin-top: 20px;
 }
 
 .social-link--dark-theme {
@@ -867,14 +890,49 @@ body {
 /* Футер */
 .footer {
   background-color: var(--primary-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__overal-wrap {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__overal-wrap {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 /* Адрес в футере*/
+.footer__address {
+  margin-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__address {
+    width: 231px;
+  }
+}
+
+.footer__contact-item {
+  display: block;
+}
+.footer__contact-item:nth-child(n+2) {
+  margin-top: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__contact-item:nth-child(n+2) {
+    margin-top: 9px;
+  }
+}
+
 .footer__contact {
+  display: block;
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms var(--time-function);
   font-style: normal;
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.71;
 }
 .footer__contact:hover, .footer__contact:focus {
   color: var(--accent-color);
@@ -885,17 +943,30 @@ body {
 }
 
 /* Форма подписки в футере */
+.signup {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .signup {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    width: 570px;
+  }
+}
+
 .signup__label {
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428571429;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 20px;
   color: var(--title-secondary-text-color);
 }
 
 .signup__input {
+  width: 100%;
   max-width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -918,7 +989,7 @@ body {
 }
 
 .signup__button {
-  width: 200px;
+  min-width: 200px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -933,6 +1004,12 @@ body {
   letter-spacing: 0.06em;
   color: var(--title-secondary-text-color);
   transition: background-color 250ms var(--time-function);
+}
+@media screen and (max-width: 1200px) {
+  .signup__button {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
 }
 .signup__button:hover {
   background-color: #188ce8;

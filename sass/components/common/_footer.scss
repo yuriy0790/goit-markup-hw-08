@@ -1,39 +1,52 @@
 /* Футер */
 .footer {
   background-color: var(--primary-background-color);
-  // padding-top: 60px;
-  // padding-bottom: 60px;
-  // min-width: 1200px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer__overal-wrap {
-  // display: flex;
-  // align-items: baseline;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 /* Адрес в футере*/
 
 .footer__address {
-  // margin-top: 20px;
-  // width: 231px;
+  margin-top: 20px;
+
+  @media screen and (min-width: $desktop) {
+    width: 231px;
+  }
 }
 
 .footer__contact-item {
-  // display: block;
+  display: block;
 
-  // &:nth-child(n + 2) {
-  //   margin-top: 9px;
-  // }
+  &:nth-child(n + 2) {
+    margin-top: 8px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    &:nth-child(n + 2) {
+      margin-top: 9px;
+    }
+  }
 }
 
 .footer__contact {
-  // display: block;
+  display: block;
 
   color: rgb(255, 255, 255, 0.6);
   transition: color 250ms var(--time-function);
 
   font-style: normal;
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.71;
 
   &:hover,
   &:focus {
@@ -47,24 +60,29 @@
 
 /* Форма подписки в футере */
 .signup {
-  // display: flex;
-  // flex-wrap: wrap;
-  // margin-left: auto;
-  // width: 570px;
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    width: 570px;
+  }
 }
 
 .signup__label {
+  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 20px;
 
   color: var(--title-secondary-text-color);
 }
 
 .signup__input {
+  width: 100%;
   max-width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -89,7 +107,12 @@
 }
 
 .signup__button {
-  width: 200px;
+  @media screen and (max-width: $desktop) {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  min-width: 200px;
   height: 50px;
   display: flex;
   align-items: center;
