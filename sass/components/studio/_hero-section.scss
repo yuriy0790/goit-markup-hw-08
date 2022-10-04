@@ -12,7 +12,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../../images/studio-mobile/hero.jpg);
+    url(../images/studio-mobile/hero.jpg);
   background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-position: center;
@@ -26,7 +26,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../images/studio-mobile/hero@2x.jpg);
+      url(../images/studio-mobile/hero@2x.jpg);
   }
 
   @media screen and (min-width: $tablet) {
@@ -38,7 +38,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../images/studio-tablet/hero.jpg);
+      url(../images/studio-tablet/hero.jpg);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -48,7 +48,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../images/studio-tablet/hero@2x.jpg);
+        url(../images/studio-tablet/hero@2x.jpg);
     }
   }
 
@@ -62,7 +62,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../images/studio-desk/hero.jpg);
+      url(../images/studio-desk/hero.jpg);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -72,7 +72,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../images/studio-desk/hero@2x.jpg);
+        url(../images/studio-desk/hero@2x.jpg);
     }
   }
 }
