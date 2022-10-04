@@ -17,10 +17,77 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="container container__header">
+      <div class="container header__container">
         <a class="logo" href="./index.html"
           ><span class="logo__half">Web</span>Studio</a
         >
+        <button
+          type="button"
+          class="burger-menu"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg
+            class="burger-menu__icon"
+            width="40"
+            height="40"
+            aria-label="Відкриття меню навігації"
+          >
+            <use
+              class="burger-menu__icon-cross"
+              href="./images/sprite.svg#close-burger"
+            ></use>
+            <use
+              class="burger-menu__icon-menu"
+              href="./images/sprite.svg#burger"
+            ></use>
+          </svg>
+        </button>
+
+        <div data-menu class="mobile-menu">
+          <ul class="navigation">
+            <li class="navigation__item">
+              <a href="./index.html" class="navigation__link">Студія</a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="./portfolio.html"
+                class="navigation__link navigation__link--current"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="" class="navigation__link">Контакти</a>
+            </li>
+          </ul>
+          <ul class="communication">
+            <li class="communication__item">
+              <a href="tel:+380961111111" class="communication__tel">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="communication__item">
+              <a href="mailto:info@devstudio.com" class="communication__mail">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="messengers">
+            <li class="messengers__item">
+              <a href="" class="messengers__link">Instagram</a>
+            </li>
+            <li class="messengers__item">
+              <a href="" class="messengers__link">Twitter</a>
+            </li>
+            <li class="messengers__item">
+              <a href="" class="messengers__link">Facebook</a>
+            </li>
+            <li class="messengers__item">
+              <a href="" class="messengers__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -349,5 +416,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
