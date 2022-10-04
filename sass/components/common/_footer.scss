@@ -8,9 +8,19 @@
 .footer__overal-wrap {
   text-align: center;
 
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 165px;
+    row-gap: 60px;
+  }
+
   @media screen and (min-width: $desktop) {
     display: flex;
     align-items: baseline;
+    text-align: left;
   }
 }
 
@@ -83,7 +93,7 @@
 
 .signup__input {
   width: 100%;
-  max-width: 358px;
+
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -96,6 +106,14 @@
   color: rgba(255, 255, 255, 0.6);
 
   background-color: var(--primary-background-color);
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 358px;
+  }
 
   &::placeholder {
     font-weight: 400;
@@ -111,7 +129,7 @@
     margin: 0 auto;
     margin-top: 20px;
   }
-
+  min-width: 200px;
   height: 50px;
   display: flex;
   align-items: center;

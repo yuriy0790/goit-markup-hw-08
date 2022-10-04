@@ -511,9 +511,11 @@ body {
 }
 
 /* Социальные сети в футере */
-.join-social {
-  margin-top: 60px;
-  margin-bottom: 60px;
+@media screen and (max-width: 768px) {
+  .join-social {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .join-social {
@@ -889,16 +891,25 @@ body {
   gap: 30px;
 }
 
+.projects__item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .projects__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
 @media screen and (min-width: 1200px) {
   .projects__item {
-    min-height: 404px;
     width: calc((100% - 60px) / 3);
   }
 }
 
 .projects__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   transition: box-shadow 250ms var(--time-function);
+  height: 100%;
 }
 .projects__link:hover, .projects__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -930,6 +941,7 @@ body {
 }
 
 .projects__meta {
+  flex-grow: 1;
   padding-top: 20px;
   padding-bottom: 19px;
   padding-left: 24px;
@@ -965,10 +977,21 @@ body {
 .footer__overal-wrap {
   text-align: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer__overal-wrap {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 165px;
+    row-gap: 60px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__overal-wrap {
     display: flex;
     align-items: baseline;
+    text-align: left;
   }
 }
 
@@ -1035,7 +1058,6 @@ body {
 
 .signup__input {
   width: 100%;
-  max-width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1048,6 +1070,16 @@ body {
   color: rgba(255, 255, 255, 0.6);
   background-color: var(--primary-background-color);
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .signup__input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .signup__input {
+    max-width: 358px;
+  }
+}
 .signup__input::placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -1057,6 +1089,7 @@ body {
 }
 
 .signup__button {
+  min-width: 200px;
   height: 50px;
   display: flex;
   align-items: center;

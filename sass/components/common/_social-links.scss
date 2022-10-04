@@ -34,8 +34,11 @@
 /* Социальные сети в футере */
 
 .join-social {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  @media screen and (max-width: $tablet) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
   @media screen and (min-width: $desktop) {
     margin-left: 70px;
   }
