@@ -1,6 +1,8 @@
 /* Секция Преимущества */
 .section--pb0 {
-  // padding-bottom: 0;
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 0;
+  }
 }
 
 .benefit-list {
@@ -11,6 +13,10 @@
 
 .benefit-list__item {
   min-width: 70px;
+
+  @media screen and (min-width: $tablet) {
+    @include card-width(30px, 2);
+  }
 
   @media screen and (min-width: $desktop) {
     @include card-width(30px, 4);

@@ -327,6 +327,7 @@ body {
   font-family: var(--main-font);
   font-size: 14px;
   letter-spacing: 0.03em;
+  min-width: 230px;
 }
 
 /* делает невидимым */
@@ -337,12 +338,15 @@ body {
   color: transparent;
 }
 
-.display-none {
-  display: none;
+@media screen and (max-width: 1200px) {
+  .display-none {
+    display: none;
+  }
 }
 
 /* Ширина контентной области */
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -389,10 +393,19 @@ body {
 @media screen and (max-width: 768px) {
   .page-header {
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 /* Навигация по сайту */
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+
 .nav__link {
   color: var(--title-primary-text-color);
   transition: color 250ms var(--time-function);
@@ -419,6 +432,12 @@ body {
 }
 
 /* Список контактов */
+@media screen and (max-width: 768px) {
+  .contacts {
+    display: none;
+  }
+}
+
 .contacts__link {
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
@@ -548,6 +567,14 @@ body {
   background-position: center;
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../../images/studio-tablet/hero.jpg);
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
@@ -599,6 +626,12 @@ body {
 }
 
 /* Секция Преимущества */
+@media screen and (min-width: 1200px) {
+  .section--pb0 {
+    padding-bottom: 0;
+  }
+}
+
 .benefit-list {
   display: flex;
   flex-wrap: wrap;
@@ -607,6 +640,11 @@ body {
 
 .benefit-list__item {
   min-width: 70px;
+}
+@media screen and (min-width: 768px) {
+  .benefit-list__item {
+    width: calc((100% - 30px) / 2);
+  }
 }
 @media screen and (min-width: 1200px) {
   .benefit-list__item {
@@ -701,6 +739,12 @@ body {
   background-color: var(--page-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .teammate {
+    width: calc((100% - 30px) / 2);
+  }
 }
 @media screen and (min-width: 1200px) {
   .teammate {
@@ -750,6 +794,11 @@ body {
 .client-list__item {
   width: calc((100% - 30px) / 2);
 }
+@media screen and (min-width: 768px) {
+  .client-list__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
 @media screen and (min-width: 1200px) {
   .client-list__item {
     width: calc((100% - 150px) / 6);
@@ -782,8 +831,25 @@ body {
 /* Кнопки фильтра превью проектов*/
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .filter {
+    max-width: 330px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__button {
@@ -798,8 +864,8 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  border: 1px solid transparent;
   border-radius: 4px;
+  letter-spacing: 0.03em;
 }
 .filter__button:hover, .filter__button:focus {
   color: var(--title-secondary-text-color);
@@ -823,9 +889,11 @@ body {
   gap: 30px;
 }
 
-.projects__item {
-  min-height: 404px;
-  width: calc((100% - 60px) / 3);
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    min-height: 404px;
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .projects__link {
@@ -989,7 +1057,6 @@ body {
 }
 
 .signup__button {
-  min-width: 200px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -1037,7 +1104,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
+  width: 100%;
+  max-width: 528px;
   padding: 40px;
   background: var(--page-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1046,6 +1114,11 @@ body {
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.1);
+}
+@media screen and (max-width: 1200px) {
+  .modal {
+    max-width: 450px;
+  }
 }
 
 .modal__x-button {
@@ -1081,9 +1154,14 @@ body {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--title-primary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal__form-header {
+    line-height: 1.15;
+  }
 }
 
 .recall-form__item-wrap {
@@ -1137,9 +1215,14 @@ body {
 .recall-form__comment-input::placeholder {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.1666666667;
+  line-height: 0.875;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+@media screen and (min-width: 1200px) {
+  .recall-form__comment-input::placeholder {
+    line-height: 1.1666666667;
+  }
 }
 .recall-form__comment-input:focus, .recall-form__comment-input:hover, .recall-form__comment-input:not(:placeholder-shown) {
   border-color: var(--accent-color);
@@ -1168,7 +1251,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.1666666667;
+}
+@media screen and (min-width: 1200px) {
+  .recall-form__policy-label {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
 }
 
 .recall-form__policy-input:checked + .recall-form__check-icon {
@@ -1182,6 +1272,7 @@ body {
 
 .recall-form__check-icon {
   display: inline-block;
+  flex-shrink: 0;
   width: 16px;
   height: 15px;
   margin-right: 7px;

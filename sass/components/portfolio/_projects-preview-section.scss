@@ -7,9 +7,11 @@
 }
 
 .projects__item {
-  min-height: 404px;
+  @media screen and (min-width: $desktop) {
+    min-height: 404px;
 
-  @include card-width(30px, 3);
+    @include card-width(30px, 3);
+  }
 }
 
 .projects__link {

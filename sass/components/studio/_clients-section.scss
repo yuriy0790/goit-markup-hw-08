@@ -13,6 +13,10 @@
 .client-list__item {
   @include card-width(30px, 2);
 
+  @media screen and (min-width: $tablet) {
+    @include card-width(30px, 3);
+  }
+
   @media screen and (min-width: $desktop) {
     @include card-width(30px, 6);
   }
