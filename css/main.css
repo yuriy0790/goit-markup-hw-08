@@ -399,13 +399,13 @@ body {
 }
 
 /* Флекс контейнер с центрированием */
-.container__header {
+.header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
-  .container__header {
+  .header__container {
     justify-content: center;
   }
 }
