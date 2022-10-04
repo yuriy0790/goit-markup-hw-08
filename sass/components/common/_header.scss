@@ -10,32 +10,40 @@
   border-bottom: 1px solid #ececec;
 }
 
+/* Флекс контейнер с центрированием */
+.container__header {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* Навигация по сайту */
 .nav {
-  @media screen and (max-width: $tablet) {
-    display: none;
+  @media screen and (min-width: $tablet) {
+    margin-left: 88px;
   }
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
 }
 
 .nav__list {
-  // display: flex;
-  // margin-left: 93px;
+  display: flex;
 }
 
 .nav__item {
-  // &:not(:last-child) {
-  //   margin-right: 50px;
-  // }
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .nav__link {
-  // position: relative;
-  // display: block;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--title-primary-text-color);
   transition: color 250ms var(--time-function);
@@ -67,24 +75,30 @@
 
 /* Список контактов */
 .contacts {
-  @media screen and (max-width: $tablet) {
-    display: none;
+  margin-left: auto;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
   }
-  // display: flex;
-  // margin-left: auto;
 }
 
 .contacts__item {
-  // &:not(:last-child) {
-  //   margin-right: 50px;
-  // }
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .contacts__link {
-  // display: flex;
-  // align-items: center;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
+  display: flex;
+  align-items: center;
 
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
@@ -98,6 +112,18 @@
   &:focus {
     color: var(--accent-color);
     fill: var(--accent-color);
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 

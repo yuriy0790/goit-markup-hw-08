@@ -368,7 +368,6 @@ body {
   }
 }
 
-/* Флекс контейнер с центрированием */
 /* Формат секций */
 .section {
   padding-top: 60px;
@@ -399,14 +398,40 @@ body {
   }
 }
 
-/* Навигация по сайту */
-@media screen and (max-width: 768px) {
-  .nav {
-    display: none;
+/* Флекс контейнер с центрированием */
+@media screen and (min-width: 768px) {
+  .container__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
+/* Навигация по сайту */
+@media screen and (min-width: 768px) {
+  .nav {
+    margin-left: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav {
+    margin-left: 93px;
+  }
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .nav__link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--title-primary-text-color);
   transition: color 250ms var(--time-function);
   font-weight: 500;
@@ -432,13 +457,29 @@ body {
 }
 
 /* Список контактов */
-@media screen and (max-width: 768px) {
+.contacts {
+  margin-left: auto;
+}
+@media screen and (min-width: 1200px) {
   .contacts {
-    display: none;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-right: 50px;
   }
 }
 
 .contacts__link {
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
   transition: color 250ms var(--time-function), fill 250ms var(--time-function);
@@ -449,6 +490,20 @@ body {
 .contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .contacts__link {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contacts__icon {
