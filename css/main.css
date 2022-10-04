@@ -399,15 +399,23 @@ body {
 }
 
 /* Флекс контейнер с центрированием */
+.container__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 @media screen and (min-width: 768px) {
   .container__header {
-    display: flex;
-    align-items: center;
     justify-content: center;
   }
 }
 
 /* Навигация по сайту */
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .nav {
     margin-left: 88px;
@@ -419,24 +427,32 @@ body {
   }
 }
 
-.nav__list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: flex;
+  }
 }
 
-.nav__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .nav__link {
-  position: relative;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--title-primary-text-color);
   transition: color 250ms var(--time-function);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+@media screen and (min-width: 768px) {
+  .nav__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .nav__link:hover, .nav__link:focus {
   color: var(--accent-color);
@@ -445,20 +461,29 @@ body {
 .nav__link--current {
   color: var(--accent-color);
 }
-.nav__link--current::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
+@media screen and (min-width: 768px) {
+  .nav__link--current::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
 }
 
 /* Список контактов */
-.contacts {
-  margin-left: auto;
+@media screen and (max-width: 768px) {
+  .contacts {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    margin-left: auto;
+  }
 }
 @media screen and (min-width: 1200px) {
   .contacts {

@@ -12,15 +12,21 @@
 
 /* Флекс контейнер с центрированием */
 .container__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   @media screen and (min-width: $tablet) {
-    display: flex;
-    align-items: center;
     justify-content: center;
   }
 }
 
 /* Навигация по сайту */
 .nav {
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+
   @media screen and (min-width: $tablet) {
     margin-left: 88px;
   }
@@ -30,20 +36,26 @@
 }
 
 .nav__list {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .nav__item {
   &:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: $tablet) {
+      margin-right: 50px;
+    }
   }
 }
 
 .nav__link {
-  position: relative;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @media screen and (min-width: $tablet) {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   color: var(--title-primary-text-color);
   transition: color 250ms var(--time-function);
@@ -62,20 +74,28 @@
   color: var(--accent-color);
 
   &::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: "";
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+    }
   }
 }
 
 /* Список контактов */
 .contacts {
-  margin-left: auto;
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+  }
 
   @media screen and (min-width: $desktop) {
     display: flex;
@@ -130,3 +150,40 @@
 .contacts__icon {
   margin-right: 10px;
 }
+
+// .mobile-menu {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   padding: 48px 40px;
+//   transform: translateX(101%);
+//   overflow: hidden;
+//   transition: transform 350ms var(--time-function);
+
+//   background-color: rgba(255, 255, 255, 0.6);
+
+//   .mobile-menu__button:hover + &,
+//   .mobile-menu__button:focus + & {
+//     transform: translateX(0);
+//   }
+
+//   @media screen and (min-width: $tablet) {
+//     display: none;
+//   }
+// }
+// .mobile-menu__button {
+//   @media screen and (min-width: $tablet) {
+//     display: none;
+//   }
+// }
+// .mobile-menu__iconwrap {
+//   width: 44px;
+//   height: 44px;
+// }
+
+// .mobile-menu__icon {
+//   width: 44px;
+//   height: 44px;
+// }
